@@ -1,0 +1,24 @@
+.tree-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.tree-node {
+  margin-bottom: 5px;
+}
+
+.node-header {
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-icon {
+  margin-left: 10px;
+}
+
+.child-nodes {
+  list-style: none;
+  padding-left: 20px;
+}

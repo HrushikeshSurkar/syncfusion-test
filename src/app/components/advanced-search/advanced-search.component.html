@@ -1,0 +1,13 @@
+<!-- src/app/shared/advanced-search/advanced-search.component.html -->
+<div class="advanced-search-container">
+  <ng-template #titleTpl let-title>
+    <h5 class="mb-2">{{ title }}</h5>
+  </ng-template>
+  <!-- Placeholder for dynamically inserted filter components -->
+  <ng-container #filterHost></ng-container>
+
+  <!-- “Apply Filters” button -->
+  <button class="btn btn-primary mt-3" type="button" (click)="onApply()">
+    Apply Filters
+  </button>
+</div>

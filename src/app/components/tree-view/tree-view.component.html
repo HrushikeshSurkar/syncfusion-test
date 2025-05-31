@@ -1,0 +1,19 @@
+<ul class="tree-list">
+  <ng-container *ngFor="let node of nodes">
+    <li class="tree-node">
+      <input type="checkbox"
+             [checked]="node.selected"
+             (change)="toggleSelection(node)" />
+      <div class="node-header"
+           (click)="toggleNode(node)">
+        <span class="node-name">{{ node.name }}</span>
+        <span class="toggle-icon">{{ node.isExpanded ? '−' : '+' }}</span>
+      </div>
+      <ul *ngIf="node.isExpanded"
+          class="child-nodes">
+        <app-tree-view #treeView
+                       [nodes]="node.children"></app-tree-view>
+      </ul>
+    </li>
+  </ng-container>
+</ul>

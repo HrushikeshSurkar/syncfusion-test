@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [AdvancedSearchComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'syncfusion-test';
-}
+export class AppComponent {}

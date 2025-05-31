@@ -1,0 +1,22 @@
+<!-- src/app/shared/advanced-search/filters/common-checkbox-filter/common-checkbox-filter.component.html -->
+
+<!--
+  1. We use “options!” to tell Angular: “I guarantee `options` is not null/undefined here.”
+     That silences the “object is possibly 'null'” error.
+  2. We define a template variable “#cb” on <input>, so that `cb.checked` is strongly typed
+     as a boolean (because `cb` is an HTMLInputElement).
+-->
+
+<div *ngFor="let option of options!; let i = index" class="form-check mb-1">
+  <input
+    #cb
+    class="form-check-input"
+    type="checkbox"
+    [id]="'checkbox_' + i"
+    [checked]="isChecked(option.value)"
+    (change)="toggleValue(option.value, cb.checked)"
+  />
+  <label class="form-check-label" [for]="'checkbox_' + i">
+    {{ option.label }}
+  </label>
+</div>

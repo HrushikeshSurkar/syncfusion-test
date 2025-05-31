@@ -1,0 +1,12 @@
+<!-- src/app/shared/advanced-search/filters/metadata-filter/metadata-filter.component.html -->
+<div class="mb-2">
+  <label for="metadataInput" class="form-label">Metadata contains:</label>
+  <input
+    id="metadataInput"
+    type="text"
+    class="form-control"
+    [(ngModel)]="searchText"
+    (ngModelChange)="onTextChange()"
+    placeholder="Type metadata keyword..."
+  />
+</div>
